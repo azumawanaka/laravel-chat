@@ -1949,8 +1949,9 @@ var app = new Vue({
     addMessage: function addMessage(message) {
       this.messages.push(message);
       axios.post('/messages', message).then(function (response) {
-        //   console.log(response.data);
-        alert(JSON.stringify(response.data));
+        console.log(response);
+      })["catch"](function (error) {
+        console.log(error);
       });
     }
   }

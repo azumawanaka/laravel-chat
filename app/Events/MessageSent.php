@@ -48,6 +48,6 @@ class MessageSent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('laravel-chat');
+        return new PrivateChannel('chat');
     }
 }

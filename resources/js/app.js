@@ -33,8 +33,11 @@ const app = new Vue({
         addMessage(message) {
             this.messages.push(message);
            
-            axios.post('/messages', message).then(response => {
-              console.log(response.data);
+
+            axios.post('/messages', message).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
             });
         }
     }
